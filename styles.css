@@ -276,10 +276,11 @@ h1{
 
 .close{
   position: absolute;
+  background-color: rgba(255, 68, 68, 0.175);
   top: 10px;
   right: 10px;
-  max-width: 10%;
-  max-height: 10%;
+  max-width: 24px;
+  max-height: 100%;
   cursor: pointer;  /* Changes the cursor to a "click" cursor */
   transition: transform 0.3s ease;  /* Smooth transition for scaling */
 }
@@ -315,12 +316,23 @@ h1{
   transition: opacity 0.3s ease, transform 0.5s ease; /* Ensure both transitions are smooth */
 }
 
-#popupImage {
+#popup-image {
   width: 100%; /* Adjusts the image to be responsive */
   justify-content: center;
   max-width: 100%; /* Sets a maximum width */
   height: auto; /* Maintains aspect ratio */
+  border: 3px solid  #b4b4b4;
 }
+
+#popup-video {
+  display: block; /* Makes the video behave like a block element */
+  margin: 15px auto; /* Centers the video horizontally with top/bottom margin */
+  width: 100%; /* Ensures the video takes full width */
+  max-width: 800px; /* Optional: Restricts the max width of the video */
+  border: 3px solid  #3f3f3f; /* Adds a border around the video */
+  border-radius: 8px; /* Optional: Rounds the corners of the border */
+}
+
 
 .popup-content {
   position: relative;
@@ -329,10 +341,9 @@ h1{
   opacity: 100%;
   padding: 20px;
   border-radius: 5px;
-  position: relative;
   z-index: 1002;
-  width: 650px;
-  max-width: 900px;
+  width: 1050px;
+  max-width: 1200px;
   max-height: 80%;
   transition: transform 0.3s ease; /* Transition for the popup content */
 }
@@ -358,17 +369,7 @@ h1{
 }
 
 
-.close-button {
-  position: absolute;
-  font-weight: bolder;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  color: rgb(236, 45, 45);
-
-}
-
-#popupTitle{
+#popup-title{
   font-family: 'Courier New', Courier, monospace;
   background-color: #3f3f3f; /* Darker gray for the menu */
   color: rgb(255, 228, 154);
@@ -379,15 +380,34 @@ h1{
   align-items: center;
 }
 
-#popupDescription{
+#popup-description{
   font-family: 'Courier New', Courier, monospace;
   background-color: #3f3f3f; /* Darker gray for the menu */
-
   color: rgb(255, 237, 179);
   border-radius: 5px;
   padding: 10px;
   z-index: 1000;
-  display: flex;
   align-items: center;
+}
+
+
+/* Apply styles to the main page scrollbar */
+html::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+html::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded edges for the track */
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.7); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded edges for the thumb */
+  border: 3px solid rgba(75, 75, 75, 0.7); /* Space around the thumb */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 1); /* Change color on hover */
 }
 
