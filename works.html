@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="menu">
+    <div><a href="index.html" class="dropdown-link">Home</a></div>
+    <div><a href="about.html" class="dropdown-link">About</a></div>
+    <div><a href="works.html" class="dropdown-link">Works</a></div>
+    <div><a href="contact.html" class="dropdown-link">Contact</a></div>
+</div>
+
+
+  <div class="work-container">
+    <div class="work-card" onclick="showPopup('Christmas Cancer', 'This work Features')">
+      <img src="images/image 1.png" alt="Work 1">
+      <h3>Christmas Cancer</h3>
+    </div>
+    <div class="work-card" onclick="showPopup('Work 2', 'Description of Work 2')">
+      <img src="images/image 2.png" alt="Work 2">
+      <h3>Planet Traprino</h3>
+    </div>
+    <div class="work-card" onclick="showPopup('Work 3', 'Description of Work 3')">
+      <img src="images/image 3.png" alt="Work 3">
+      <h3>Camera Modeling</h3>
+    </div>
+    <div class="work-card" onclick="showPopup('Work 5', 'Description of Work 5')">
+      <img src="images/image 5.png" alt="Work 5">
+      <h3>ACMI Collaboration</h3>
+    </div>
+    <div class="work-card" onclick="showPopup('Work 6', 'Description of Work 6')">
+      <img src="images/image 6.png" alt="Work 6">
+      <h3>Substance Painter</h3>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <img class="close" src="images/Icons/close.png" onclick="closePopup()">
+      <h2 id="popupTitle"></h2>
+      <p id="popupDescription"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Passion+One:wght@400;700;900&family=Poppins&family=Roboto:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #242424;
+}
+
+a{
+  text-decoration: none;
+  color: aquamarine;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Sticks to a fixed position on the viewport */
+  top: 1%; /* Aligns the menu at the bottom of the viewport */
+  left: 50%; /* Starts the menu in the middle of the screen */
+  transform: translateX(-50%); /* Centers it horizontally */
+  padding: 10px; /* Optional: Adds padding around the menu */
+  color: rgb(255, 228, 154);
+}
+
+.title {
+  position: fixed; /* Positions the element relative to the viewport */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset by half of its own size to truly center */
+  
+  color: rgb(255, 230, 162);
+  font-size: 230px; /* Adjust as needed */
+  font-family: "Passion One", sans-serif;
+  font-weight: 700;
+  text-align: center; /* Centers text within the title box */
+}
+
+h1{
+  color: rgb(255, 230, 162);
+  font-size: 30px; /* Adjust as needed */
+  font-family: "Passion One", sans-serif;
+  font-weight: 700;
+  position: fixed;
+  bottom: 32%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Adjusting the dropdown text links */
+.dropdown-link {
+  color: rgb(255, 230, 162); 
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  display: block;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect for the dropdown links */
+.dropdown-link:hover {
+  color: rgb(200, 255, 150);
+  transform: scale(1.2);
+}
+
+.contacts {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 50px; /* Space between icons */
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts a img {
+  width: 60px; /* Icon size */
+  height: 60px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Icon hover effect */
+.contacts a:hover img {
+  transform: scale(1.4); /* Slightly enlarges icon on hover */
+  filter: brightness(0) saturate(10%) invert(66%) sepia(87%) saturate(142%) hue-rotate(69deg) brightness(99%) contrast(93%); /* This will approximate your color */
+}
+
+
+.container {
+  text-align: center;
+  position: relative; /* Positioning context for absolute positioning */
+  height: 100%; /* Full height for centering */
+  background-color: #242424;
+}
+
+.main{
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #242424;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+.cube {
+  width: 150px; /* Increased size */
+  height: 150px; /* Increased size */
+  position: absolute; /* Position the cube independently */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%) rotateX(0) rotateY(0); /* Adjust position and rotation */
+  transform-style: preserve-3d;
+  animation: rotate 6s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 150px; /* Match increased size */
+  height: 150px; /* Match increased size */
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Increased font size */
+  font-weight: bold;
+}
+
+.front  { background-color: rgba(255, 0, 0, 0.8);; transform: translateZ(75px); }
+.back   { background-color: rgba(0, 255, 0, 0.8); transform: rotateY(180deg) translateZ(75px); }
+.left   { background-color: rgba(0, 17, 255, 0.8); transform: rotateY(-90deg) translateZ(75px); }
+.right  { background-color: rgba(255, 255, 0, 0.8); transform: rotateY(90deg) translateZ(75px); }
+.top    { background-color: rgba(166, 0, 255, 0.8); transform: rotateX(90deg) translateZ(75px); }
+.bottom { background-color: rgba(0, 255, 255, 0.8); transform: rotateX(-90deg) translateZ(75px); }
+
+.text-container {
+  margin-top: 200px; /* Space between the cube and the text at the bottom */
+  text-align: center;
+}
+
+@keyframes rotate {
+  from {
+      transform: translate(-50%, -50%) rotateX(0) rotateY(0);
+  }
+  to {
+      transform: translate(-50%, -50%) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.profabout {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #3f3f3f;
+  margin: 5%;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  top: 50%
+}
+
+#profile {
+  border-radius: 2%;
+  width: 22%;
+  height: 25%;
+}
+
+.abouttext {
+  color: rgb(255, 237, 179);
+  font-size: 17px;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.abouttitle {
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.skills {
+  background-color: #303030;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  border: 3px solid rgb(255, 237, 179);
+  border-radius: 5px;
+  margin: 0px auto; /* Center and add space from the about section */
+}
+
+.skills h2 {
+  color: rgb(255, 237, 179);
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skill{
+  margin-left: 7%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
+  grid-template-rows: repeat(4, 1fr); /* 3 rows, equal height */
+  gap: 10px; /* Space between images */
+}
+
+.skill-icon{
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.skill div:first-child {
+  width: 30%;
+  font-weight: bold;
+}
+
+.skill-bar {
+  width: 70%;
+  background-color: rgb(200, 255, 150);
+  color: rgb(21, 21, 21);
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+  max-width: 100%;
+  font-weight: bold;
+}
+
+
+.work-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 5%;
+  justify-self: center;
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.work-card {
+  background-color: rgb(48, 48, 48);
+  border: 2px solid rgb(255, 237, 179);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.work-card:hover {
+  transform: scale(1.05);
+  border-color: rgb(200, 255, 150);;
+}
+
+.work-card img {
+  width: 100%; /* Make the image take up the full width of the card */
+  height: 80%; /* Make the image take up the full height of the card */
+  object-fit: cover; /* Ensure the image fills the card and doesn't stretch */
+  object-position: center; /* Keep the image centered */
+}
+
+.work-card h3 {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(255, 228, 154);
+}
+
+
+.close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  max-width: 10%;
+  max-height: 10%;
+  cursor: pointer;  /* Changes the cursor to a "click" cursor */
+  transition: transform 0.3s ease;  /* Smooth transition for scaling */
+}
+
+.close:hover {
+  transform: scale(1.2);  /* Increases the size by 20% when hovered */
+}
+
+
+.popup {
+  display: none; /* Start hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content:center;
+  padding: 20px;
+  align-items: center;
+  z-index: 1001;
+  transition: opacity 0.3s ease; /* Transition for opacity */
+}
+
+.popup-active {
+  display: flex; /* Use flex to center content */
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Move to visible position */
+}
+
+.popup-closing {
+  opacity: 0; /* Fade out */
+  transform: translateY(100%); /* Move off the right side of the screen */
+  transition: opacity 0.3s ease, transform 0.5s ease; /* Ensure both transitions are smooth */
+}
+
+#popupImage {
+  width: 100%; /* Adjusts the image to be responsive */
+  justify-content: center;
+  max-width: 100%; /* Sets a maximum width */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.popup-content {
+  position: relative;
+  background-color: #645f53;
+  overflow-y: auto; /* Scroll only when content overflows */
+  opacity: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1002;
+  width: 650px;
+  max-width: 900px;
+  max-height: 80%;
+  transition: transform 0.3s ease; /* Transition for the popup content */
+}
+
+/* WebKit browsers scrollbar styles */
+.popup-content::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.popup-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded edges for the track */
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.7); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded edges for the thumb */
+  border: 3px solid rgba(75, 75, 75, 0.7); /* Space around the thumb */
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 1); /* Change color on hover */
+}
+
+
+.close-button {
+  position: absolute;
+  font-weight: bolder;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: rgb(236, 45, 45);
+
+}
+
+#popupTitle{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #3f3f3f; /* Darker gray for the menu */
+  color: rgb(255, 228, 154);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+#popupDescription{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #3f3f3f; /* Darker gray for the menu */
+
+  color: rgb(255, 237, 179);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
