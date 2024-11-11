@@ -2,7 +2,7 @@
 const workItems = {
   "Christmas Cure": {
     title: "Christmas Cure",
-    video: "images/Videos/Hospital Voxel (INCOMPLETE).mp4",
+    video: "https://www.youtube.com/embed/R5ZHqVZNaTM",
     
     description: 
       `<p>This work was made in Blender a few months before Christmas. The story tells the tale of a father declining from cancer with his son beside him, bearing the burden of a dying father during Christmas.</p>
@@ -20,7 +20,7 @@ const workItems = {
 
   "Planet Traprino": {
     title: "Planet Traprino",
-    video: "images/Videos/TraprinoGP.mp4",
+    video: "https://www.youtube.com/embed/zll2mkOL1Tk",
     description: `<p>The focus for this project was to practice world building and environment building skills in Unity. the reason for unity is because having an explorable environment forces the creation of the scenery to look more intentional all around compared to a static video or static photo of just one enviornment.</p>
     <p>These skills would be: </p> 
     <p> - Learning how to gather large quantities of assets that were required for such a large scale enviornment.</p>
@@ -80,7 +80,7 @@ const workItems = {
 
   "ACMI Collaboration": {
     title: "ACMI Collaboration",
-    video: "images/Videos/Tram.mp4",
+    video: "https://www.youtube.com/embed/moYfjHNTQZg",
     description: `<p>ACMI's exhibition journey consistently captivates visitors with an array of intriguing exhibits that explore both historical and contemporary themes. 
     However, the conclusion of this otherwise thrilling experience falls flat, with the final exhibit—the Constellation—feeling anticlimactic. 
     Originally designed to provide an overview of the visitor's path through the exhibition and highlight connections to related topics, the Constellation fails to deliver a satisfying end.
@@ -99,7 +99,6 @@ const workItems = {
   },
 
 };
-  
 function showPopup(workKey) {
   const work = workItems[workKey];
   
@@ -109,20 +108,20 @@ function showPopup(workKey) {
     document.getElementById("popup-description").innerHTML = work.description;
     document.getElementById("popup-image").src = work.image;
 
-    // Check if the work has a video
+    // Check if a YouTube video exists
     const videoElement = document.getElementById("popup-video");
     if (work.video) {
+      // Set the src for the iframe (YouTube embed link)
       videoElement.src = work.video;
       videoElement.style.display = "block"; // Make video visible
-      videoElement.play(); // Start playing the video automatically
     } else {
-      videoElement.style.display = "none"; // Hide the video if no video link exists
+      videoElement.style.display = "none"; // Hide video if no link is provided
     }
 
     // Show the popup
     const popup = document.getElementById("popup");
     popup.style.display = "flex";
-
+    
     // Add an event listener to close the popup if clicked outside
     popup.addEventListener("click", function(event) {
       if (event.target === popup) {
@@ -131,6 +130,7 @@ function showPopup(workKey) {
     });
   }
 }
+
 
   
   function closePopup() {
